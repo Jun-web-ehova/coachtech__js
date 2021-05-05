@@ -73,14 +73,20 @@ header {
 }
 
 .header__menu {
-  display: block;
-  width: 4%;
-  height: 70px;
-  padding: 0 5% 0 0;
-  position: fixed;
-  top: 0;
-  left: 85%;
-  z-index: 10;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu {
+    display: block;
+    width: 4%;
+    height: 70px;
+    padding: 0 5% 0 0;
+    position: fixed;
+    top: 0;
+    left: 85%;
+    z-index: 10;
+  }
 }
 
 .header__menu span {
