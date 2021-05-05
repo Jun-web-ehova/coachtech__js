@@ -1,0 +1,348 @@
+@charset "UTF-8";
+body {
+  width: 100vw;
+  position: relative;
+  z-index: 7;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+
+.header__logo {
+  width: 10%;
+  font-size: 24px;
+  display: block;
+  padding: 0 3vw 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.header__logo:hover {
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    padding: 0 6vw 0;
+  }
+}
+
+.header__list {
+  width: 44%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .header__list {
+    display: none;
+  }
+}
+
+.header__list a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header__list a:hover {
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .header__list a {
+    display: none;
+  }
+}
+
+.header__menu {
+  display: block;
+  width: 4%;
+  height: 70px;
+  padding: 0 5% 0 0;
+  position: fixed;
+  top: 0;
+  left: 85%;
+  z-index: 10;
+}
+
+.header__menu span {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .menu__line-top {
+    top: 20px;
+  }
+  .menu__line-middle {
+    top: 35px;
+  }
+  .menu__line-bottom {
+    bottom: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu.open {
+    display: block;
+  }
+  .header__menu.open .menu__line-top {
+    transform: rotate(45deg);
+    top: 35px;
+  }
+  .header__menu.open .menu__line-middle {
+    opacity: 0;
+  }
+  .header__menu.open .menu__line-bottom {
+    transform: rotate(-45deg);
+    top: 35px;
+  }
+}
+
+.header__menu-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-hidden {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin: -70px 0 0;
+    background-color: white;
+    position: absolute;
+    left: -100%;
+    z-index: 9;
+    transition: all 0.5s;
+    padding: 14% 0;
+  }
+  a {
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: #0033cc;
+    padding: 3%;
+  }
+  .in {
+    transform: translateX(100%);
+    position: fixed;
+  }
+}
+
+.contact__top {
+  width: 100vw;
+  height: 29vh;
+  background-image: url(../img/mv.png);
+  background-size: cover;
+  background-position: 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0 0;
+}
+
+.contact__top-title {
+  display: block;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.contact__form {
+  width: 64%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+@media screen and (max-width: 768px) {
+  .contact__form {
+    width: 90vw;
+    padding: 80px 0;
+  }
+}
+
+.contact__table {
+  width: 100%;
+}
+
+.contact__table th {
+  text-align: left;
+  padding: 2.5% 0 1%;
+}
+
+.contact__table input {
+  width: 100%;
+  border: solid 1px #ccc;
+  padding: 0.75% 0;
+}
+
+.contact__table textarea {
+  width: 100%;
+  border: solid 1px #ccc;
+}
+
+.contact__table span {
+  color: #cd0224;
+}
+
+@media screen and (max-width: 768px) {
+  .contact__table th {
+    padding: 3.5% 0 1%;
+  }
+}
+
+.contact__btn-black {
+  display: block;
+  width: 32%;
+  background-color: black;
+  color: white;
+  margin: 3% auto 0;
+  padding: 0.75% 0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .contact__btn-black {
+    width: 300px;
+    padding: 1% 0;
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: #222222;
+  height: 60px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 30vh;
+  }
+}
+
+.footer__box {
+  width: 72%;
+  display: flex;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__box {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer__box {
+    display: block;
+  }
+}
+
+.footer__logo {
+  width: 50%;
+  line-height: 60px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__logo {
+    text-align: center;
+    line-height: 30vh;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer__logo {
+    text-align: center;
+    line-height: 5vh;
+    width: 100%;
+  }
+}
+
+.footer__list {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__list {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer__list {
+    text-align: center;
+    line-height: 1vh;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.footer__list a {
+  border-right: solid 1px white;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  height: 12px;
+  margin: 3% 0;
+  padding: 0.3% 2%;
+}
+
+.footer__list a:hover {
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__list a {
+    border: none;
+    margin: 5% 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__list a {
+    border: none;
+    margin: 4% 0 0;
+  }
+}
+
+.footer__list a:last-of-type {
+  border: none;
+}

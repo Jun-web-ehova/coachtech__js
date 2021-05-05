@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社TECH</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/contact.min.css" />
+</head>
+<body>
+  <header>
+    <a href="" class="header__logo">TECH</a>
+  
+    <div class="header__list" id="header__list">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">事業内容</a>
+      <a href="news.html">ニュース</a>
+      <a href="blog.html">社員ブログ</a>
+      <a href="company.html">会社概要</a>
+      <a href="recruit.html">採用情報</a>
+      <a href="contact.html">お問い合わせ</a>
+    </div>
+  </header>
+  
+  
+  <div class="header__menu" id="header__menu">
+    <span class="menu__line-top"></span>
+    <span class="menu__line-middle"></span>
+    <span class="menu__line-bottom"></span>
+  </div>
+  
+  <div class="header__menu-hidden" id="header__menu-hidden">
+    <a href="index.html">ホーム</a>
+    <a href="service.html">事業内容</a>
+    <a href="news.html">ニュース</a>
+    <a href="blog.html">社員ブログ</a>
+    <a href="company.html">会社概要</a>
+    <a href="recruit.html">採用情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+
+
+
+  <div class="contact__top">
+    <h1 class="contact__top-title">お問い合わせ</h1>
+  </div>
+
+
+  <form class="contact__form" action="" method="POST" >
+    <table class="contact__table">
+      <tr><th><label for="company__name">会社名</label></th></tr>
+      <tr><td><input  type="text" name="company__name"></td></tr>
+      <tr><th><label for="name">お名前<span>*</span></label></th></tr>
+      <tr><td><input type="text" name="name" required></td></tr>
+      <tr><th><label for="email">メールアドレス<span>*</span></label></th></tr>
+      <tr><td><input type="email" name="email" required></td></tr>
+      <tr><th><label for="message">お問い合わせ内容<span>*</span></label></th></tr>
+      <tr><td><textarea name="message" cols="30" rows="10" required></textarea></td></tr>
+    </table>
+
+    <input type="submit" class="contact__btn-black" value="お申し込み" >
+  </form>
+
+
+
+  <footer>
+    <div class="footer__box">
+      <p class="footer__logo">&copy; 2020 TECH inc.</p>
+      <div class="footer__list">
+        <a href="index.html" class="">ホーム</a>
+        <a href="service.html" class="">事業内容</a>
+        <a href="news.html" class="">ニュース</a>
+        <a href="blog.html" class="">社員ブログ</a>
+        <a href="company.html" class="">会社概要</a>
+        <a href="recruit.html" class="">採用情報</a>
+        <a href="contact.html" class="">お問い合わせ</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
